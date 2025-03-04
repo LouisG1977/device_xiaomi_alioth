@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
+# Inherit some common Project-Xtended stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit Camera-related flags
@@ -29,8 +29,17 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 BUILD_FINGERPRINT := POCO/alioth_global/alioth:13/TKQ1.221114.001/V816.0.2.0.TKHMIXM:user/release-keys
 
 TARGET_BOOT_ANIMATION_RES := 1440
-TENX_BUILD_TYPE := Official
+
+# Maintainer name for Xtended
+XTENDED_BUILD_TYPE := Official
+XTENDED_MAINTAINER := 🔥Louis1977🔥
+
+# Gapps
 WITH_GMS := true
+
+# Remove Xtended prebuilt
+TARGET_INCLUDE_ACCORD := false
+BUILD_BCR := false
 
 # Pixel stuff
 TARGET_FACE_UNLOCK_SUPPORTED := true
