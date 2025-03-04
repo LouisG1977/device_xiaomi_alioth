@@ -8,7 +8,7 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common lineage stuff.
+# Inherit some common Project-Xtended stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit Camera-related flags
@@ -16,6 +16,7 @@ TARGET_USES_MIUI_CAMERA := true
 TARGET_INCLUDES_MIUI_CAMERA := true
 
 # Inherit from alioth device
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, device/xiaomi/alioth/device.mk)
 
 PRODUCT_NAME := lineage_alioth
@@ -28,3 +29,24 @@ PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     BuildFingerprint=google/husky_beta/husky:16/BP41.250822.010/14082742:user/release-keys
+
+TARGET_BOOT_ANIMATION_RES := 1440
+
+# Maintainer name for Xtended
+XTENDED_BUILD_TYPE := Official
+XTENDED_MAINTAINER := 🔥Louis1977🔥
+
+# Gapps
+WITH_GMS := true
+
+# Remove Xtended prebuilt
+TARGET_INCLUDE_ACCORD := false
+BUILD_BCR := false
+
+# Pixel stuff
+TARGET_OPTIMIZED_DEXOPT := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+TARGET_SUPPORTS_QUICK_TAP := true
