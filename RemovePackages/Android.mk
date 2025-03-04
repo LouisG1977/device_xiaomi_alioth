@@ -7,6 +7,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_OVERRIDES_PACKAGES := \
     AudioFX \
     Eleven \
+    Twelve \
     Etar \
     ExactCalculator \
     Jelly \
@@ -24,7 +25,6 @@ LOCAL_OVERRIDES_PACKAGES := \
     Maps \
     MiuiScanner \
     Matlog \
-    MatLog \
     MyVerizonServices \
     OBDM_Permissions \
     GoogleTTS \
@@ -34,15 +34,11 @@ LOCAL_OVERRIDES_PACKAGES := \
     talkback \
     SoundAmplifierPrebuilt \
     DevicePolicyPrebuilt \
-    TrichromeLibrary \
-    TrichromeWebView \
     TrichromeChrome \
     obdm_stub \
     OemDmTrigger \
     OPScreenRecord \
     Ornament \
-    Photos \
-    PrebuiltGmail \
     SafetyHubPrebuilt \
     ScribePrebuilt \
     Showcase \
