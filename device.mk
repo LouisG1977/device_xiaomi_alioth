@@ -10,8 +10,8 @@ TARGET_IS_VAB := true
 # Inherit from sm8250-common
 $(call inherit-product, device/xiaomi/sm8250-common/kona.mk)
 
-# Miuicamera
-$(call inherit-product, vendor/xiaomi/camera/miuicamera.mk)
+# Miui Camera
+include device/xiaomi/camera/miuicamera.mk
 
 # AAPT
 PRODUCT_AAPT_CONFIG := normal
